@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  background-color: #418191;
+  background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
+}
+
+.hover:hover{
+  cursor: pointer;
+}
+
+#main-container {
+  width: 50vw;
+  height: 90vh;
+  border: 2px solid black;
+  box-shadow: 1px -2px 50px 5px #040024;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 55px;
+  background-color: #418191;
+  background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
+
+}
+
+#main-container>h1 {
+  text-align: center;
+  font-style: italic;
+  color: #290c5d;
+  margin-top: 45px;
+  font-size: 55px;
+  font-weight: 800;
+  font-family: 'Protest Revolution';
+}
+
+.input {
+  display: flex;
+  gap: 5px;
+}
+
+#input::placeholder {
+  color: #290c5d;
+  font-weight: 800;
+}
+
+#input {
+  width: 420px;
+  padding: 5px;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-family: 'Protest Revolution';
+  border: 3px solid #290c5d;
+  border-radius: 10px;
+  outline: none;
+  color: #290c5d;
+  background-color: #418191;
+  background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
+}
+
+button,.icon{
+  position: relative;
+  right: 38px;
+  border:none;
+  font-weight: 900;
+  font-size: 30px;
+  width: 32px;
+  border-radius: 0px 10px 10px 0px;
+  height: 38px;
+  background-color: #290c5d;
+  color: white;
+}
+.icon-img{
+  position: relative;
+  left: -1px;
+}
+.todos-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+.sub-input{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+#check{
+  font-size: 15px;
+  font-weight: 800;
+  font-family: 'Protest Revolution';
+  letter-spacing: 2px;
+  color: #290c5d;
+  position: relative;
+  right: 165px;
+}
+.todos{
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  overflow-x: scroll;
+}
+.todos::-webkit-scrollbar{
+    display: none;
+}
+.card{
+  position: relative;
+  right: 45px;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.todo{
+  width: 30%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+}
+.todo li{
+  font-size: 30px;
+  font-weight: 800;
+  font-family: 'Protest Revolution';
+  font-style: italic;
+  color: #290c5d;
+  text-transform:capitalize;
+}
+.icons{
+  font-weight: 900;
+  font-size: 30px;
+  color: #290c5d;
+}
