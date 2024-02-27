@@ -1,21 +1,33 @@
-import express from "express"
-import router from "./routes.js"
+import express from "express";
+import router from "./routes.js";
+import path from 'path';
 import dotenv from 'dotenv';
+import { fileURLToPath } from 'url'; // Import fileURLToPath
+import { connectToMongoDB } from "./database.js";
+
 dotenv.config();
-import {connectToMongoDB} from "./database.js"
 
-const app = express()
+const __filename = fileURLToPath(import.meta.url); 
+const __dirname = path.dirname(__filename); 
 
-app.use(express.json())
-app.use('/api', router)
+const app = express();
 
-const port = process.env.PORT
+app.use(express.json());
+app.use(express.static(path.join(__dirname, "dist")));
 
-async function connectServer(){
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, "dist", "index.html")); 
+});
+
+app.use('/api', router);
+
+const port = process.env.PORT || 3000; 
+
+async function connectServer() {
   await connectToMongoDB();
   app.listen(port, () => {
-    console.log(`Example app listening on http://localhost:${port}`)
-  })
+    console.log(`Example app listening on http://localhost:${port}`);
+  });
 }
-connectServer();
 
+connectServer();
