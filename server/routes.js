@@ -25,22 +25,18 @@ router.post('/todos', async (req, res) => {
 
     todo = (typeof todo === "string") ? todo : JSON.stringify(todo);
     const createdAt = new Date();
-    const newTodo = await collection.insertOne({todo,createdAt})
+    const newTodo = await collection.insertOne({ todo, createdAt, status: false })
 
-    res.status(201).json({ todo,createdAt ,_id: newTodo.insertedId })
+    res.status(201).json({ todo, createdAt, status: false, _id: newTodo.insertedId })
 })
 
 router.delete('/todos/:id', async (req, res) => {
     const collection = getCollection();
     const _id = new ObjectId(req.params.id)
 
-    const deleteTodo = await collection.deleteOne({_id})
+    const deleteTodo = await collection.deleteOne({ _id })
 
     res.status(200).json(deleteTodo)
-})
-
-router.put('/todos/:id', async (req, res) => {
-    res.status(200).json({mssg:"put request"})
 })
 
 export default router;

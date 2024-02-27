@@ -37,6 +37,8 @@ body {
 }
 
 #main-container>h1 {
+  position: relative;
+  right: 20px;
   font-style: italic;
   color: #290c5d;
   margin-top: 45px;
@@ -89,7 +91,7 @@ button,
 
 .todos-container {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -115,10 +117,10 @@ button,
 
 .todos {
   width: 100%;
-  height: 70%;
+  height: 60%;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 25px;
   overflow-x: scroll;
 }
 
@@ -154,7 +156,7 @@ ul {
 
 .todo li {
   padding: 5px;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 800;
   font-style: italic;
   color: #290c5d;
@@ -163,6 +165,7 @@ ul {
 
 p {
   font-weight: 800;
+  font-size: 12px;
   font-style: italic;
   color: #290c5d;
 }
@@ -176,7 +179,7 @@ p {
 @media only screen and (max-width:1115px) {
   #main-container>h1 {
     font-size: 40px;
-    margin-right: 40px;
+    margin-right: 15px;
   }
 
   #main-container {
@@ -189,7 +192,7 @@ p {
   #input {
     width: 320px;
     height: 18px;
-    font-weight: 400;
+    font-weight: 800;
     font-size: 15px;
   }
 
@@ -210,6 +213,7 @@ p {
   .todos {
     width: 70%;
     display: flex;
+    overflow: hidden;
     gap: 0px;
   }
 
@@ -238,7 +242,7 @@ p {
 
 }
 
-@media only screen and (max-width:950px) {
+@media only screen and (max-width:850px) {
   body {
     height: 100%;
     width: 100%;
@@ -250,10 +254,11 @@ p {
   #main-container>h1 {
     font-size: 25px;
     position: relative;
-    right: 20px;
+    right: 8px;
   }
 
   #main-container {
+    padding: 15px;
     height: 95vh;
     width: 50vw;
     margin-top: 0px;
@@ -261,20 +266,20 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
   }
 
   #input {
     width: 220px;
     height: 18px;
-    font-weight: 100;
+    font-weight: 800;
     font-size: 12px;
   }
 
   .card {
     position: none;
     display: flex;
-    gap: 18px;
+    gap: 65px;
   }
 
   .radio,
@@ -286,8 +291,8 @@ p {
 
   .todos {
     display: flex;
-    gap: 0px;
-    overflow: hidden;
+    position: relative;
+    left: 10px;
   }
 
   .todo li {
@@ -325,15 +330,14 @@ p {
   #main-container>h1 {
     font-size: 25px;
     position: relative;
-    right: 20px;
+    right: 25px;
   }
 
   #main-container {
     width: 100vw;
     height: 100%;
-    margin-top: 0px;
     border: none;
-    border-radius:0px ;
+    border-radius: 0px;
     box-shadow: none;
     display: flex;
     flex-direction: column;
@@ -355,17 +359,110 @@ p {
     gap: 85px;
   }
 
+  .radio>input {
+    height: 8px;
+  }
+
   .radio,
   #check {
     position: relative;
-    left: -45px;
-    font-size: 12px;
+    left: -48px;
+    font-size: 10px;
   }
 
   .todos {
     display: flex;
     gap: 0px;
-    overflow: hidden;
+  }
+
+  .todo li {
+    font-size: 18px;
+  }
+
+  ul>p {
+    font-size: 8px;
+  }
+
+  .icons {
+    font-weight: 900;
+    font-size: 18px;
+    margin-bottom: 22px;
+    color: #290c5d;
+  }
+
+  button,
+  .icon {
+    height: 32px;
+    font-size: 12px;
+    font-weight: 100;
+  }
+
+}
+
+@media only screen and (max-width:499px) {
+  body {
+    width: 100%;
+    height: 100%;
+    background: none;
+  }
+
+  #main-container>h1 {
+    font-size: 25px;
+    position: relative;
+    left: -8px;
+  }
+
+  #main-container {
+    width: 100vw;
+    height: 100%;
+    margin-top: 0px;
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  #input {
+    position: relative;
+    left: 15px;
+    width: 220px;
+    height: 18px;
+    font-weight: 100;
+    font-size: 16px;
+  }
+
+  button,
+  .icon {
+    position: relative;
+    right: 23px;
+  }
+
+  .card {
+    position: none;
+    display: flex;
+    gap: 85px;
+  }
+
+  .radio>input {
+    height: 8px;
+  }
+
+  .radio,
+  #check {
+    position: relative;
+    left: -37px;
+    font-size: 10px;
+  }
+
+
+  .todos {
+    display: flex;
+    position: relative;
+    left: 25px;
   }
 
   .todo li {
