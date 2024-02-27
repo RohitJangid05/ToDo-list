@@ -208,6 +208,7 @@ p {
   }
 
   .todos {
+    width: 70%;
     display: flex;
     gap: 0px;
   }
@@ -342,7 +343,7 @@ p {
   }
 
   #input {
-    width: 340px;
+    width: 240px;
     height: 18px;
     font-weight: 100;
     font-size: 16px;
@@ -357,7 +358,7 @@ p {
   .radio,
   #check {
     position: relative;
-    left: -70px;
+    left: -45px;
     font-size: 12px;
   }
 
