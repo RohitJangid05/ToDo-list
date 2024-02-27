@@ -1,13 +1,21 @@
 import { MdDelete, MdEdit } from "react-icons/md";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Todo(props) {
-    const { todo, setTodos, showChecked } = props
+    const { todo, setTodos, showChecked, date } = props
     const [strike, setStrike] = useState(false)
+    useEffect(() => {
+        const strikeState = localStorage.getItem(`todo-${todo._id}`);
+        if (strikeState) {
+            setStrike(JSON.parse(strikeState));
+        }
+    }, [todo._id]);
 
     const toggleStrike = () => {
-        setStrike(!strike)
-    }
+        const newStrikeState = !strike;
+        setStrike(newStrikeState);
+        localStorage.setItem(`todo-${todo._id}`, JSON.stringify(newStrikeState));
+    };
 
     const deleteTodo = async (todoId) => {
         const res = await fetch(`/api/todos/${todoId}`, {
@@ -27,11 +35,15 @@ function Todo(props) {
         <div className="card" style={{ display: strike && showChecked && 'none' }} >
             <ul className="todo">
                 <li className='hover' style={{ textDecoration: strike ? 'line-through' : 'none'}}  onClick={toggleStrike}  >{todo.todo}</li>
+                <p>{date.toLocaleString()}</p>
             </ul>
-            <MdEdit className='icons hover' />
-            <MdDelete className='icons hover' onClick={() => {
+            
+            <div className="icons">
+            {/* <MdEdit className="md hover" /> */}
+            <MdDelete className='md hover' onClick={() => {
                 deleteTodo(todo._id)
             }} />
+            </div>
         </div>
     )
 }

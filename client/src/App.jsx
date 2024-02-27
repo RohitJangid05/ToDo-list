@@ -10,11 +10,8 @@ function App() {
   const toggleShowChecked = () => {
     setShowChecked(!showChecked);
   };
-
-
   const [todos, setTodos] = useState([]);
-
-
+  
   useEffect(() => {
     async function getTodos() {
       const res = await fetch('/api/todos');
@@ -32,7 +29,7 @@ function App() {
   return (
     <>
       <div id="main-container">
-        <h1>TODO LIST</h1>
+        <h1>ToDo Task</h1>
         <div className="todos-container">
           <div className="sub-input">
             <Form addTodo={addTodo} />
@@ -41,8 +38,12 @@ function App() {
           <div className="todos">
             {(todos.length > 0) && todos.map((todo) => (
               <Todo
+                key={todo._id}
+                todo={todo}
                 showChecked={showChecked}
-                key={todo._id} todo={todo} setTodos={setTodos} />
+                date={new Date(todo.createdAt)}
+                setTodos={setTodos}
+              />
             ))}
           </div>
         </div>
