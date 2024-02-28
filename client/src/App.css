@@ -244,8 +244,8 @@ p {
 
 @media only screen and (max-width:850px) {
   body {
-    height: 100%;
-    width: 100%;
+    /* height: 100%;
+    width: 100%; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -373,14 +373,17 @@ p {
   .todos {
     display: flex;
     gap: 0px;
+    height: 100vh;
   }
 
   .todo li {
     font-size: 18px;
+    width: 150px;
   }
 
   ul>p {
     font-size: 8px;
+    width: 150px;
   }
 
   .icons {
@@ -403,7 +406,7 @@ p {
   body {
     width: 100%;
     height: 100%;
-    background: none;
+    /* background: none; */
   }
 
   #main-container>h1 {
@@ -414,7 +417,7 @@ p {
 
   #main-container {
     width: 100vw;
-    height: 100%;
+    height: 100vh;
     margin-top: 0px;
     border: none;
     border-radius: 0px;
@@ -463,6 +466,7 @@ p {
     display: flex;
     position: relative;
     left: 25px;
+    height: 100vh;
   }
 
   .todo li {
