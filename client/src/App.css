@@ -58,7 +58,7 @@ form {
 }
 
 #input {
-  width: 25rem;
+  width: 27rem;
   height: 1.7rem;
   padding: 5px 0px 5px 10px;
   color: black;
@@ -76,11 +76,11 @@ form {
 }
 
 button {
-  height: 2.63rem;
+  position: relative;
+  right: 30px;
+  height: 2.62rem;
   background: transparent;
   border: none;
-  border-bottom: 3px solid black;
-  border-top: 3px solid black;
 }
 
 .icon {
@@ -91,6 +91,7 @@ button {
 .radio {
   font-weight: 200;
   display: flex;
+  align-items: center;
   padding-left: 3px;
   gap: 5px;
 }
@@ -124,7 +125,8 @@ button {
   gap: 10px;
 }
 
-ul>li,p {
+ul>li,
+p {
   width: 25vw;
 }
 
@@ -132,24 +134,24 @@ ul>p {
   font-size: 15px;
 }
 
-@media only screen and (max-width:1000px) {  
-  
+@media only screen and (max-width:1000px) {
+
   main>.title {
     margin-top: 45px;
     font-size: 20px;
   }
-  
+
   #input {
     width: 15rem;
     height: 1.7rem;
     font-size: 20px;
   }
-  
+
   #input::placeholder {
     color: black;
     font-size: 20px;
   }
-  
+
   .icon {
     font-size: 33px;
   }
@@ -158,16 +160,17 @@ ul>p {
     margin-top: 15px;
     gap: 10px;
   }
-  
+
   .card {
     font-size: 20px;
     gap: 1px;
   }
-  
-  ul>li,p {
+
+  ul>li,
+  p {
     width: 20vw;
   }
-  
+
   ul>p {
     font-size: 10px;
   }
@@ -175,25 +178,33 @@ ul>p {
 
 @media only screen and (max-width:710px) {
 
-  main{
+  main {
     width: 100vw;
   }
-  main{
+
+  main {
     border: none;
     box-shadow: none;
   }
-  
+
   #input {
     width: 19rem;
     height: 1.7rem;
     font-size: 20px;
   }
-   
+  .checkbox{
+    height: 11px;
+  }
+  .radio{
+    font-size:11px ;
+    gap: 1px;
+  }
+
   .todos {
     width: 50vw;
     gap: 10px;
   }
-  
+
   .card {
     font-size: 20px;
     display: flex;
@@ -203,26 +214,30 @@ ul>p {
 }
 
 @media only screen and (max-width:499px) {
-  
-body{
-  justify-content: flex-start;
-}
-main>.title{
-  margin-top: 20px;
-}
 
-  #input{
-    width:14rem ;
+  body {
+    justify-content: flex-start;
   }
 
-  .todos{
+  main>.title {
+    margin-top: 20px;
+  }
+
+  #input {
+    width: 14rem;
+  }
+
+  .todos {
     width: 100%;
   }
-  .card{
+
+  .card {
     gap: 5px;
   }
-  ul>li,p {
+
+  ul>li,
+  p {
     width: 50vw;
   }
-  
+
 }
