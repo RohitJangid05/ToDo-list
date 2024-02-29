@@ -43,6 +43,7 @@ main {
 
 main>.title {
   margin-top: 45px;
+  margin-right:23px;
   font-size: 25px;
 }
 
@@ -142,7 +143,7 @@ ul>p {
   }
 
   #input {
-    width: 15rem;
+    width: 19rem;
     height: 1.7rem;
     font-size: 20px;
   }
@@ -221,12 +222,16 @@ ul>p {
 
   main>.title {
     margin-top: 20px;
+    margin-right: 24px;
   }
 
   #input {
-    width: 14rem;
+    margin-left: 14px;
+    width: 18rem;
   }
-
+.radio{
+  margin-left: 6px;
+}
   .todos {
     width: 100%;
   }
