@@ -21,11 +21,11 @@ function Form({addTodo}){
   }
     return(
         <form className="input" onSubmit={createNewTodo}>
-              <input id='input' type="text" placeholder='Enter new Todo....'
+              <input id='input' autocomplete="off" type="text" placeholder='Enter new Todo....'
                 value={content} onChange={(e) => setContent(e.target.value)}
                 required
               />
-              <button type='submit'><IoMdAdd className='icon icon-img hover' /></button>
+              <button ><IoMdAdd type='submit' className='icon hover' /></button>
             </form>
     )
 }
