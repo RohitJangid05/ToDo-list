@@ -8,7 +8,7 @@ function Radio({showChecked, toggleShowChecked}) {
     }
     return (
         <div className="radio">
-            <label htmlFor="checkbox" id='check' className='radio hover' onClick={toggleShowChecked}><input type="checkbox" checked={showChecked} className='hover' />Hide Checked</label>
+            <label htmlFor="checkbox" id='check' className='radio hover' onClick={toggleShowChecked}><input type="checkbox" checked={showChecked} className=' checkbox hover' />Hide Checked</label>
         </div>
     )
 }

@@ -1,497 +1,228 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Protest Revolution';
-}
-
-
-body {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  user-select: none;
-  display: flex;
-  justify-content: center;
-  margin-top: 25px;
-  background-color: #418191;
-  background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
+  font-family: "Permanent Marker";
+  color: black;
+  font-weight: 500;
 }
 
 .hover:hover {
   cursor: pointer;
 }
 
-#main-container {
-  width: 50vw;
-  height: 93vh;
-  border: 2px solid black;
-  box-shadow: 1px -2px 50px 5px #040024;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 35px;
-  background-color: #418191;
-  background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
-
-}
-
-#main-container>h1 {
-  position: relative;
-  right: 20px;
-  font-style: italic;
-  color: #290c5d;
-  margin-top: 45px;
-  font-size: 55px;
-  font-weight: 800;
-}
-
-.input {
-  display: flex;
-  gap: 5px;
-}
-
-#input::placeholder {
-  color: #290c5d;
-  font-weight: 800;
-}
-
-#input {
-  width: 420px;
-  padding: 5px;
-  font-size: 20px;
-  font-weight: 800;
-  letter-spacing: 2px;
-  border: 3px solid #290c5d;
-  border-radius: 10px;
-  outline: none;
-  color: #290c5d;
-  background-color: #418191;
-  background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
-}
-
-button,
-.icon {
-  position: relative;
-  right: 38px;
-  border: none;
-  font-weight: 900;
-  font-size: 30px;
-  width: 32px;
-  border-radius: 0px 10px 10px 0px;
-  height: 38px;
-  background-color: #290c5d;
-  color: white;
-}
-
-.icon-img {
-  position: relative;
-  left: -1px;
-}
-
-.todos-container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 25px;
-}
-
-.sub-input {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-}
-
-#check {
-  font-size: 15px;
-  font-weight: 800;
-  letter-spacing: 2px;
-  color: #290c5d;
-  position: relative;
-  right: 165px;
-}
-
-.todos {
-  width: 100%;
-  height: 60%;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  overflow-x: scroll;
+body::-webkit-scrollbar {
+  display: none;
 }
 
 .todos::-webkit-scrollbar {
   display: none;
 }
 
-.card {
-  position: relative;
-  right: 15px;
-  width: 100%;
-  min-height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 75px;
-}
-
-.md {
-  margin-right: 15px;
-}
-
-.todo {
-  width: 30%;
-  height: 40px;
+body {
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #3f3d3d;
+  background-image: url("https://www.transparenttextures.com/patterns/brushed-alum.png");
 }
 
-ul {
-  margin-bottom: 25px;
+main {
+  width: 50vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  border: 2px solid #190606;
+  border-radius: 20px;
+  box-shadow: 1px -2px 50px 5px #190606;
 }
 
-.todo li {
-  padding: 5px;
+main>.title {
+  margin-top: 45px;
   font-size: 25px;
-  font-weight: 800;
-  font-style: italic;
-  color: #290c5d;
-  text-transform: capitalize;
 }
 
-p {
-  font-weight: 800;
-  font-size: 12px;
-  font-style: italic;
-  color: #290c5d;
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px
 }
 
-.icons {
-  font-weight: 900;
-  font-size: 30px;
-  color: #290c5d;
+form {
+  display: flex;
+  align-items: center;
 }
 
-@media only screen and (max-width:1115px) {
-  #main-container>h1 {
-    font-size: 40px;
-    margin-right: 15px;
+#input {
+  width: 25rem;
+  height: 1.7rem;
+  padding: 5px 0px 5px 10px;
+  color: black;
+  font-size: 25px;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid black;
+  border-top: 3px solid black;
+  outline: none;
+}
+
+#input::placeholder {
+  color: black;
+  font-size: 25px;
+}
+
+button {
+  height: 2.63rem;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid black;
+  border-top: 3px solid black;
+}
+
+.icon {
+  font-size: 31px;
+  color: black;
+}
+
+.radio {
+  font-weight: 200;
+  display: flex;
+  padding-left: 3px;
+  gap: 5px;
+}
+
+.todos-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.todos {
+  margin-top: 35px;
+  width: 30vw;
+  height: 60vh;
+  padding-left: 15px;
+  margin-bottom: 17px;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+}
+
+.card {
+  font-size: 25px;
+  display: flex;
+  gap: 10px;
+}
+
+ul>li,p {
+  width: 25vw;
+}
+
+ul>p {
+  font-size: 15px;
+}
+
+@media only screen and (max-width:1000px) {  
+  
+  main>.title {
+    margin-top: 45px;
+    font-size: 20px;
   }
-
-  #main-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
+  
   #input {
-    width: 320px;
-    height: 18px;
-    font-weight: 800;
-    font-size: 15px;
+    width: 15rem;
+    height: 1.7rem;
+    font-size: 20px;
   }
-
-
-  .radio,
-  #check {
-    position: relative;
-    left: -65px;
-    font-size: 12px;
+  
+  #input::placeholder {
+    color: black;
+    font-size: 20px;
   }
-
-  .card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  
+  .icon {
+    font-size: 33px;
   }
 
   .todos {
-    width: 70%;
-    display: flex;
-    overflow: hidden;
-    gap: 0px;
-  }
-
-  .todo li {
-    font-size: 15px;
-    text-wrap: nowrap;
-  }
-
-  ul>p {
-    font-size: 8px;
-  }
-
-  .icons {
-    font-weight: 900;
-    font-size: 20px;
-    margin-bottom: 20px;
-    color: #290c5d;
-  }
-
-  button,
-  .icon {
-    height: 32px;
-    font-size: 12px;
-    font-weight: 300;
-  }
-
-}
-
-@media only screen and (max-width:850px) {
-  body {
-    /* height: 100%;
-    width: 100%; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  #main-container>h1 {
-    font-size: 25px;
-    position: relative;
-    right: 8px;
-  }
-
-  #main-container {
-    padding: 15px;
-    height: 95vh;
-    width: 50vw;
-    margin-top: 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    margin-top: 15px;
     gap: 10px;
   }
-
-  #input {
-    width: 220px;
-    height: 18px;
-    font-weight: 800;
-    font-size: 12px;
-  }
-
+  
   .card {
-    position: none;
-    display: flex;
-    gap: 65px;
+    font-size: 20px;
+    gap: 1px;
   }
-
-  .radio,
-  #check {
-    position: relative;
-    left: -40px;
-    font-size: 12px;
+  
+  ul>li,p {
+    width: 20vw;
   }
-
-  .todos {
-    display: flex;
-    position: relative;
-    left: 10px;
-  }
-
-  .todo li {
-    font-size: 15px;
-  }
-
+  
   ul>p {
-    font-size: 8px;
-  }
-
-  .icons {
-    font-weight: 900;
-    font-size: 18px;
-    margin-bottom: 22px;
-    color: #290c5d;
-  }
-
-  button,
-  .icon {
-    height: 32px;
-    font-size: 12px;
-    font-weight: 100;
-  }
-
-}
-
-@media only screen and (max-width:600px) {
-  body {
-    width: 100%;
-    height: 100%;
-    margin-top: 0px;
-    background: none;
-  }
-
-  #main-container>h1 {
-    font-size: 25px;
-    position: relative;
-    right: 25px;
-  }
-
-  #main-container {
-    width: 100vw;
-    height: 100%;
-    border: none;
-    border-radius: 0px;
-    box-shadow: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-  }
-
-  #input {
-    width: 240px;
-    height: 18px;
-    font-weight: 100;
-    font-size: 16px;
-  }
-
-  .card {
-    position: none;
-    display: flex;
-    gap: 85px;
-  }
-
-  .radio>input {
-    height: 8px;
-  }
-
-  .radio,
-  #check {
-    position: relative;
-    left: -48px;
     font-size: 10px;
   }
+}
 
+@media only screen and (max-width:710px) {
+
+  main{
+    width: 100vw;
+  }
+  main{
+    border: none;
+    box-shadow: none;
+  }
+  
+  #input {
+    width: 19rem;
+    height: 1.7rem;
+    font-size: 20px;
+  }
+   
   .todos {
+    width: 50vw;
+    gap: 10px;
+  }
+  
+  .card {
+    font-size: 20px;
     display: flex;
-    gap: 0px;
-    height: 100vh;
-  }
-
-  .todo li {
-    font-size: 18px;
-    width: 150px;
-  }
-
-  ul>p {
-    font-size: 8px;
-    width: 150px;
-  }
-
-  .icons {
-    font-weight: 900;
-    font-size: 18px;
-    margin-bottom: 22px;
-    color: #290c5d;
-  }
-
-  button,
-  .icon {
-    height: 32px;
-    font-size: 12px;
-    font-weight: 100;
+    gap: 90px;
   }
 
 }
 
 @media only screen and (max-width:499px) {
-  body {
+  
+body{
+  justify-content: flex-start;
+}
+main>.title{
+  margin-top: 20px;
+}
+
+  #input{
+    width:14rem ;
+  }
+
+  .todos{
     width: 100%;
-    height: 100%;
-    background-color: #418191;
-    background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
   }
-
-  #main-container>h1 {
-    font-size: 25px;
-    position: relative;
-    left: -8px;
+  .card{
+    gap: 5px;
   }
-
-  #main-container {
-    width: 100vw;
-    height: 100vh;
-    margin-top: 0px;
-    border: none;
-    background-color: #418191;
-    background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
-    border-radius: 0px;
-    box-shadow: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
+  ul>li,p {
+    width: 50vw;
   }
-
-  #input {
-    position: relative;
-    left: 15px;
-    width: 220px;
-    height: 18px;
-    font-weight: 100;
-    font-size: 16px;
-  }
-
-  button,
-  .icon {
-    position: relative;
-    right: 23px;
-  }
-
-  .card {
-    position: none;
-    display: flex;
-    gap: 85px;
-  }
-
-  .radio>input {
-    height: 8px;
-  }
-
-  .radio,
-  #check {
-    position: relative;
-    left: -37px;
-    font-size: 10px;
-  }
-
-
-  .todos {
-    display: flex;
-    position: relative;
-    left: 25px;
-    height: 100vh;
-  }
-
-  .todo li {
-    font-size: 18px;
-  }
-
-  ul>p {
-    font-size: 8px;
-  }
-
-  .icons {
-    font-weight: 900;
-    font-size: 18px;
-    margin-bottom: 22px;
-    color: #290c5d;
-  }
-
-  button,
-  .icon {
-    height: 32px;
-    font-size: 12px;
-    font-weight: 100;
-  }
-
+  
 }

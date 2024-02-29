@@ -35,11 +35,9 @@ function Todo(props) {
         <div className="card" style={{ display: strike && showChecked && 'none' }} >
             <ul className="todo">
                 <li className='hover' style={{ textDecoration: strike ? 'line-through' : 'none'}}  onClick={toggleStrike}  >{todo.todo}</li>
-                <p>{date.toLocaleString()}</p>
+                <p className="hover">{date.toLocaleString()}</p>
             </ul>
-            
             <div className="icons">
-            {/* <MdEdit className="md hover" /> */}
             <MdDelete className='md hover' onClick={() => {
                 deleteTodo(todo._id)
             }} />

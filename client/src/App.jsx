@@ -11,7 +11,7 @@ function App() {
     setShowChecked(!showChecked);
   };
   const [todos, setTodos] = useState([]);
-  
+
   useEffect(() => {
     async function getTodos() {
       const res = await fetch('/api/todos');
@@ -28,10 +28,12 @@ function App() {
 
   return (
     <>
-      <div id="main-container">
-        <h1>ToDo Task</h1>
+      <main>
+        <div className="title">
+          <h1>ToDo Task</h1>
+        </div>
         <div className="todos-container">
-          <div className="sub-input">
+          <div className="inputs">
             <Form addTodo={addTodo} />
             <Radio showChecked={showChecked} toggleShowChecked={toggleShowChecked} />
           </div>
@@ -47,7 +49,8 @@ function App() {
             ))}
           </div>
         </div>
-      </div>
+      </main>
+
     </>
   )
 }
